@@ -62,21 +62,49 @@ body {
 }
 
 .info {
-  width: 680px;
+  width: 690px;
+  height: 545px;
+  overflow: auto;
   border: 1px solid #a8deef;
   margin-top: -265px;
   border-radius: 15px;
   grid-column: 2; /* Info will be in the second column */
 }
 
-.info video {
-  width: 100%; /* Set the width to 100% of its container */
+.info_container {
+  overflow-y: auto;
+}
+
+.video_container {
+  margin-top: 15px;
+}
+
+.video_container video {
+  width: 600px; /* Set the width of the video */
   border-radius: 15px;
+  display: block; /* Ensures the video is treated as a block element */
+  margin: 0 auto; /* Centers the video horizontally */
+  border: 2px solid #a8deef;
+}
+
+.text {
+  padding-left: 35px;
+  padding-right: 40px;
+}
+.video_container p {
+  margin-top: 15px;
 }
 
 .info p {
   margin-left: 15px;
   color: #a8deef;
+}
+
+.dropdown {
+  margin-top: 20px;
+  margin-left: 50px;
+  position: relative;
+  display: inline-block;
 }
 
 .slider-container {
@@ -94,7 +122,6 @@ body {
 
 .slider img {
   height: auto;
-  border-radius: 20px;
 }
 
 .slide {

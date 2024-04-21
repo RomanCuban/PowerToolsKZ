@@ -64,26 +64,92 @@
       </section>
 
       <section class="info">
-        <video src="/video/powertools.mp4" controls muted></video>
-        <p>Description of the video goes here</p>
-        <div class="slider-container">
-          <div class="slider">
-            <img src="/images/logo.png" alt="Photo 1" class="slide" />
-            <img src="/images/tools.png" alt="Photo 2" class="slide" />
-            <img src="/images/tools.png" alt="Photo 2" class="slide" />
-            <img src="/images/tools.png" alt="Photo 2" class="slide" />
+        <div class="info_container">
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Select View
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  onclick="showVideo()"
+                >
+                  Video
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  onclick="showPhoto()"
+                >
+                  Photo
+                </button>
+              </li>
+            </ul>
           </div>
-
-          <button class="prev" onclick="prevSlide()">&#10094;</button>
-          <button class="next" onclick="nextSlide()">&#10095;</button>
-
-          <div class="slider-dots"></div>
+          <div class="video_container">
+            <video src="/video/powertools.mp4" controls muted></video>
+            <p class="text">
+              The screwdriver is a handheld tool designed for turning screws to
+              either fasten or loosen them. It typically consists of a handle
+              and a shaft ending in a tip that fits into the head of a screw.
+              Screwdrivers come in various sizes and types to accommodate
+              different screw heads, such as flathead, Phillips, or Torx. They
+              are essential tools in carpentry, construction, and household
+              repairs.
+            </p>
+          </div>
+          <div class="slider-container" style="display: none">
+            <div class="slider">
+              <img
+                src="/images/sliders/slider1screwdriver.png"
+                alt="Photo 1"
+                class="slide"
+              />
+              <img
+                src="/images/sliders/slider2screwdriver.png"
+                alt="Photo 2"
+                class="slide"
+              />
+              <img
+                src="/images/sliders/slider3screwdriver.png"
+                alt="Photo 2"
+                class="slide"
+              />
+              <img
+                src="/images/sliders/slider4screwdriver.png"
+                alt="Photo 2"
+                class="slide"
+              />
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+            <div class="slider-dots"></div>
+            <p>Description of the image goes here</p>
+          </div>
         </div>
-        <p>Description of the image goes here</p>
       </section>
     </div>
 
     <script>
+      function showVideo() {
+        document.querySelector(".video_container").style.display = "block";
+        document.querySelector(".slider-container").style.display = "none";
+      }
+
+      function showPhoto() {
+        document.querySelector(".video_container").style.display = "none";
+        document.querySelector(".slider-container").style.display = "block";
+      }
+
       let currentSlide = 0;
       const slides = document.querySelectorAll(".slide");
       const dotsContainer = document.querySelector(".slider-dots");
