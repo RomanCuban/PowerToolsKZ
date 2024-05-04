@@ -71,10 +71,6 @@ body {
   grid-column: 2; /* Info will be in the second column */
 }
 
-.info_container {
-  overflow-y: auto;
-}
-
 .video_container {
   margin-top: 15px;
 }
@@ -91,6 +87,7 @@ body {
   padding-left: 35px;
   padding-right: 40px;
 }
+
 .video_container p {
   margin-top: 15px;
 }
@@ -121,7 +118,8 @@ body {
 }
 
 .slider img {
-  height: auto;
+  width: 30px;
+  border-radius: 20px;
 }
 
 .slide {
@@ -136,7 +134,7 @@ body {
 .prev,
 .next {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -171,4 +169,38 @@ body {
 
 .active {
   background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  border-radius: 30px;
+  background-color: #a8deef;
+}
+
+.extra-container button {
+  margin-top: 20px;
+  margin-left: 45px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 600px;
+  border: 1px solid #a8deef;
+  background-color: #a8deef;
+  text-align: center;
+  font-size: large;
+  transition: background-color 0.3s, border-color 0.1s;
+}
+
+.extra-container button:hover {
+  background-color: #a8deef7e;
+  border: 1px solid #000000;
+}
+
+.back {
+  margin-right: 1100px;
+  text-decoration: none;
+  color: #a8deef;
+  transition: color 0.1s;
+}
+
+.back:hover {
+  color: #a8deef7e;
 }

@@ -26,6 +26,12 @@
           <a class="navbar-brand" href="#">
             <img src="/images/logo.png" alt="logo" width="50" />
           </a>
+          <a class="back" href="/html/categories.html"
+            ><img
+              src="/images/back-svgrepo-com.svg"
+              width="20px"
+            />Categories</a
+          >
         </div>
       </nav>
     </header>
@@ -41,23 +47,58 @@
       <section class="specs_info">
         <div class="specs">
           <div class="specs1">
-            <img src="/images/specs/voltage.svg" alt="voltage" />
+            <img
+              src="/images/specs/voltage.svg"
+              alt="voltage"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="The voltage in power tools usually depends on the type of tool and its purpose. In most cases, the voltage can be 110-120 volts for tools designed for use at home or small workshops, as well as 220-240 volts for tools designed for more intensive professional use."
+            />
             <p>12 - 18 V</p>
           </div>
           <div class="specs1">
-            <img src="/images/specs/capacity.svg" alt="capacity" />
+            <img
+              src="/images/specs/capacity.svg"
+              alt="capacity"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="The amperage (or current) in screwdrivers is usually indicated as the electric current consumed or the operating current that is transmitted to the tool from the power source. It can be expressed in amperes (A) or milliamps (mA), depending on the power of the instrument."
+            />
             <p>1.5 - 4 Ah</p>
           </div>
           <div class="specs1">
-            <img src="/images/specs/speed.svg" alt="speed" />
+            <img
+              src="/images/specs/speed.svg"
+              alt="speed"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="The speed in screwdrivers is usually expressed in revolutions per minute (rpm) and indicates the speed of rotation of the spindle (bits) during tool operation. This is an important parameter that affects the performance and efficiency of the screwdriver."
+            />
             <p>1300 - 4500 rpm</p>
           </div>
           <div class="specs1">
-            <img src="/images/specs/chuck.svg" alt="chuck" />
+            <img
+              src="/images/specs/chuck.svg"
+              alt="chuck"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="It is a mechanism that is used to hold and fix various attachments, such as bits or drills."
+            />
             <p>10 - 13 mm</p>
           </div>
           <div class="specs1">
-            <img src="/images/specs/settings.svg" alt="settings" />
+            <img
+              src="/images/specs/settings.svg"
+              alt="settings"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="This means that there are 13 modes for screwing in and 1 mode for drilling."
+            />
             <p>13 + 1</p>
           </div>
         </div>
@@ -93,10 +134,19 @@
                   Photo
                 </button>
               </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  onclick="showExtra()"
+                >
+                  Extra
+                </button>
+              </li>
             </ul>
           </div>
           <div class="video_container">
-            <video src="/video/powertools.mp4" controls muted></video>
+            <video src="/video/screwdriver.mp4" controls muted></video>
             <p class="text">
               The screwdriver is a handheld tool designed for turning screws to
               either fasten or loosen them. It typically consists of a handle
@@ -110,82 +160,60 @@
           <div class="slider-container" style="display: none">
             <div class="slider">
               <img
-                src="/images/sliders/slider1screwdriver.png"
+                src="/images/sliders/screwdriver/slider1screwdriver.png"
                 alt="Photo 1"
                 class="slide"
+                height="350px"
               />
               <img
-                src="/images/sliders/slider2screwdriver.png"
+                src="/images/sliders/screwdriver/slider2screwdriver.png"
                 alt="Photo 2"
                 class="slide"
+                height="350px"
               />
               <img
-                src="/images/sliders/slider3screwdriver.png"
-                alt="Photo 2"
+                src="/images/sliders/screwdriver/slider3screwdriver.png"
+                alt="Photo 3"
                 class="slide"
+                height="350px"
               />
               <img
-                src="/images/sliders/slider4screwdriver.png"
-                alt="Photo 2"
+                src="/images/sliders/screwdriver/slider4screwdriver.png"
+                alt="Photo 4"
                 class="slide"
+                height="350px"
               />
             </div>
             <button class="prev" onclick="prevSlide()">&#10094;</button>
             <button class="next" onclick="nextSlide()">&#10095;</button>
             <div class="slider-dots"></div>
-            <p>Description of the image goes here</p>
+            <p id="image-description"></p>
+          </div>
+          <div class="extra-container" style="display: none">
+            <a href="/pdfs/screwdriver.pdf">
+              <button>View Tool Manual</button>
+            </a>
+            <p class="text">
+              A screwdriver manual typically provides instructions on how to
+              use, maintain, and troubleshoot screwdrivers. It covers topics
+              such as different types of screwdrivers, proper handling
+              techniques, safety precautions, and maintenance tips. The manual
+              may also include information on selecting the right screwdriver
+              for specific tasks, understanding screw types and sizes, and
+              common problems encountered when using screwdrivers and how to
+              solve them. Overall, a screwdriver manual serves as a
+              comprehensive guide to help users effectively and safely utilize
+              this essential tool.
+            </p>
+            <a href="/pdfs/screwdriver_extra.pdf">
+              <button>View Battery Manual</button>
+            </a>
           </div>
         </div>
       </section>
     </div>
 
-    <script>
-      function showVideo() {
-        document.querySelector(".video_container").style.display = "block";
-        document.querySelector(".slider-container").style.display = "none";
-      }
-
-      function showPhoto() {
-        document.querySelector(".video_container").style.display = "none";
-        document.querySelector(".slider-container").style.display = "block";
-      }
-
-      let currentSlide = 0;
-      const slides = document.querySelectorAll(".slide");
-      const dotsContainer = document.querySelector(".slider-dots");
-
-      function showSlide(n) {
-        slides[currentSlide].style.display = "none";
-        currentSlide = (n + slides.length) % slides.length;
-        slides[currentSlide].style.display = "block";
-        updateDots();
-      }
-
-      function nextSlide() {
-        showSlide(currentSlide + 1);
-      }
-
-      function prevSlide() {
-        showSlide(currentSlide - 1);
-      }
-
-      function updateDots() {
-        const dots = document.querySelectorAll(".dot");
-        dots.forEach((dot) => dot.classList.remove("active"));
-        dots[currentSlide].classList.add("active");
-      }
-
-      // Создаем круглые индикаторы для слайдов
-      slides.forEach((slide, index) => {
-        const dot = document.createElement("span");
-        dot.classList.add("dot");
-        dot.addEventListener("click", () => showSlide(index));
-        dotsContainer.appendChild(dot);
-      });
-
-      showSlide(currentSlide);
-    </script>
-
+    <script src="/js/screwdriver.js"></script>
     <script src="https://use.fontawesome.com/df966d76e1.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
@@ -197,5 +225,13 @@
       integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
   </body>
 </html>
