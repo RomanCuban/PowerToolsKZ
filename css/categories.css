@@ -27,6 +27,17 @@ body {
   color: #2ec2ef;
 }
 
+.back {
+  margin-right: 570px;
+  text-decoration: none;
+  color: #a8deef;
+  transition: color 0.1s;
+}
+
+.back:hover {
+  color: #a8deef7e;
+}
+
 .categories {
   border-right: 1px solid #a8deef; /* Вертикальная линия справа */
   height: 100%; /* Сохранение высоты секции */

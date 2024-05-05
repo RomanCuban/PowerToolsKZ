@@ -1,0 +1,49 @@
+* {
+  font-family: "Anton", sans-serif;
+}
+
+body {
+  background-color: #131313;
+}
+
+.navbar {
+  padding: 1rem 8rem;
+}
+
+.nav-item {
+  width: 120px;
+}
+
+.nav-link {
+  color: #a8deef;
+}
+
+.nav-link:hover {
+  color: #2ec2ef;
+}
+
+.back {
+  margin-right: 1100px;
+  text-decoration: none;
+  color: #a8deef;
+  transition: color 0.1s;
+}
+
+.back:hover {
+  color: #a8deef7e;
+}
+
+.services {
+  padding: 1rem 8rem;
+}
+
+.row {
+  background-color: #a8deef;
+  border-radius: 30px;
+  padding: 45px;
+}
+
+.link {
+  text-decoration: none;
+  color: #131313;
+}
