@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="kz">
+  <head>
+    <title>Перфоратор</title>
+    <link rel="shortcut icon" href="/images/logo.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/tools/rotaryhammer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="/images/logo.png" alt="logo" width="50" />
+          </a>
+          <a class="back" href="/kz/html/categorieskz.html"
+            ><img src="/images/back-svgrepo-com.svg" width="20px" />Санаттар</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="content">
+        <div class="tool">
+          <img src="/images/tools/hammer.png" alt="tool" />
+          <p>Перфоратор</p>
+        </div>
+      </section>
+
+      <section class="specs_info">
+        <div class="specs">
+          <div class="specs1">
+            <img
+              src="/images/specs/voltage.svg"
+              alt="watt"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Электр құралының қуаты оның өнімділігі мен әртүрлі тапсырмаларды орындау қабілетін анықтайтын маңызды параметр болып табылады. Қуат әдетте ваттпен (Watts) немесе қуатты құралдар үшін киловаттпен (kW) өлшенеді."
+            />
+            <p>550 - 2000 W</p>
+          </div>
+          <div class="specs1">
+            <img
+              src="/images/specs/speed.svg"
+              alt="speed"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Перфоратордың айналу жиілігі әдетте минутына айналу жылдамдығымен (rpm) көрсетіледі және жұмыс кезінде құрал шпиндельінің айналу жылдамдығын көрсетеді. Бұл материалды тиімді бұрғылау немесе кесу үшін маңызды."
+            />
+            <p>0 - 2400 rpm</p>
+          </div>
+          <div class="specs1">
+            <img
+              src="/images/specs/chuck.svg"
+              alt="chuck"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Перфораторларда патрон бұрғылауды немесе басқа қондырмаларды орнату және бекіту үшін қолданылады."
+            />
+            <p>10 - 13 mm</p>
+          </div>
+          <div class="specs1">
+            <img
+              src="/images/specs/force.svg"
+              alt="force"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Соққы күші әдетте оның соққы энергиясымен немесе минутына джоульмен (Дж) немесе джоульмен (Дж/мин) өлшенетін соққы күшімен анықталады. Бұл балғаның материалдарды, әсіресе бетон, кірпіш немесе тас сияқты қатты материалдарды қаншалықты қуаттай алатынын немесе бұрғылай алатынын көрсетеді."
+            />
+            <p>1.7 - 6 J</p>
+          </div>
+          <div class="specs1">
+            <img
+              src="/images/specs/settings.svg"
+              alt="settings"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Бұл режимдерге қашау режимі (соққы бұрғылау), қалыпты бұрғылау режимі (соққысыз) және дәлірек жұмыс істеу үшін қосымша режим, мысалы, жұқа материалдар үшін шектеулі әсер ету режимі кіруі мүмкін."
+            />
+            <p>3 + 1</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="info">
+        <div class="info_container">
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Көріністі Таңдаңыз
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  onclick="showVideo()"
+                >
+                  Видео
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  onclick="showPhoto()"
+                >
+                  Фото
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  onclick="showExtra()"
+                >
+                  Қосымша
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="video_container">
+            <video src="/video/rotaryhammer.mp4" controls muted></video>
+            <p class="text">
+              Перфоратор - бұл негізінен қолданылатын қуатты құрал Құрылыс және
+              қайта құру жобалары. Ол арналған бетон, тас немесе тас сияқты
+              қатты материалдарды бұрғылау қалау. Кәдімгі бұрғылардан
+              айырмашылығы, балғалар қолданылады күшті соққыларды жасауға
+              арналған поршеньдік механизм, не істейді бұрғылау тезірек және
+              тиімді. Олар әртүрлі өлшемдері мен конфигурациялары, соның ішінде
+              сымды және сымсыз модельдер және якорь орнату сияқты тапсырмаларды
+              орындау үшін қажет, бетонды сындыру немесе үлкен диаметрлі
+              тесіктерді бұрғылау қатты материалдар.
+            </p>
+          </div>
+          <div class="slider-container" style="display: none">
+            <div class="slider">
+              <img
+                src="/images/sliders/rotaryhammer/slider1hammer.png"
+                alt="Photo 1"
+                class="slide"
+                height="350px"
+              />
+              <img
+                src="/images/sliders/rotaryhammer/slider2hammer.png"
+                alt="Photo 2"
+                class="slide"
+                height="350px"
+              />
+              <img
+                src="/images/sliders/rotaryhammer/slider3hammer.png"
+                alt="Photo 3"
+                class="slide"
+                height="350px"
+              />
+              <img
+                src="/images/sliders/rotaryhammer/slider4hammer.png"
+                alt="Photo 4"
+                class="slide"
+                height="350px"
+              />
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+            <div class="slider-dots"></div>
+            <p id="image-description"></p>
+          </div>
+          <div class="extra-container" style="display: none">
+            <a href="/pdfs/rotaryhammer.pdf">
+              <button>Құралды пайдалану жөніндегі нұсқаулықты қарау</button>
+            </a>
+            <p class="text">
+              Перфоратор нұсқаулығында негізгі нұсқаулар бар мұны қауіпсіз және
+              тиімді пайдалану туралы нұсқаулар құрал. Әдетте, ол келесі
+              нұсқауларды қамтиды келесі мәселелер құрастыру, пайдалану,
+              техникалық қызмет көрсету және ақаулықтарды жою. Сонымен қатар, ол
+              мыналарды қамтуы мүмкін қауіпсіздік нұсқаулары, мысалы, қорғаныс
+              кию жабдық және қауіпті жағдайлардан аулақ болу мүмкіндігі.
+              Нұсқаулық операциялар көбінесе диаграммаларды, бөлшектер
+              тізімдерін және пайдаланушылар өздерін жақсы түсінуге көмектесетін
+              сипаттамалар перфоратор және оның өнімділігі мен қызмет ету
+              мерзімі.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/kz/js/rotaryhammerkz.js"></script>
+    <script src="https://use.fontawesome.com/df966d76e1.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
+  </body>
+</html>

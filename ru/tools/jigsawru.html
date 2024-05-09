@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Лобзик</title>
+    <link rel="shortcut icon" href="/images/logo.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/tools/jigsaw.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="/images/logo.png" alt="logo" width="50" />
+          </a>
+          <a class="back" href="/ru/html/categoriesru.html"
+            ><img src="/images/back-svgrepo-com.svg" width="20px" />Категории</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="content">
+        <div class="tool">
+          <img src="/images/tools/jigsaw2.png" alt="tool" />
+          <p>Лобзик</p>
+        </div>
+      </section>
+
+      <section class="specs_info">
+        <div class="specs">
+          <div class="specs1">
+            <img
+              src="/images/specs/voltage.svg"
+              alt="watt"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Мощность электроинструмента - важный параметр, определяющий его производительность и способность справляться с различными задачами. Мощность обычно измеряется в ваттах (Watts) или, для более мощных инструментов, в киловаттах (kW)."
+            />
+            <p>500 - 900 W</p>
+          </div>
+          <div class="specs1">
+            <img
+              src="/images/specs/speed.svg"
+              alt="speed"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Скорость работы лобзика обычно измеряется в ударах в минуту (ход/мин) или оборотах в минуту (об/мин) и определяет скорость перемещения пильного полотна или пильного полотна лобзика. Это важный параметр, который влияет на эффективность и качество кроя, а также на возможность работы с различными материалами."
+            />
+            <p>3100 - 5000 spm</p>
+          </div>
+          <div class="specs1">
+            <img
+              src="/images/specs/cutting.svg"
+              alt="cutting"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Лобзики обычно используются для выполнения прямых и криволинейных разрезов в различных материалах."
+            />
+            <p>1,3 - 2,6 m</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="info">
+        <div class="info_container">
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Выберите Вид
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  onclick="showVideo()"
+                >
+                  Видео
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  onclick="showPhoto()"
+                >
+                  Фото
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  onclick="showExtra()"
+                >
+                  Экстра
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="video_container">
+            <video src="/video/jigsaw.mp4" controls muted></video>
+            <p class="text">
+              Лобзик - это универсальный электроинструмент, используемый в
+              основном для вырезание кривых и неправильных форм из различных
+              материалов, таких как дерево, металл, пластик и ламинат. Он
+              состоит из моторизованного лезвие, которое быстро перемещается
+              вверх и вниз возвратно-поступательными движениями, обеспечивает
+              точную и контролируемую резку. Лобзики пользуются популярностью
+              как среди любителей самостоятельной работы, так и среди
+              профессионалов благодаря своей способности выполнять сложные
+              вырезы и мобильности. Они поставляются с различные типы лезвий для
+              различных материалов и целей резки делают их пригодными для
+              широкого спектра работ, от деревообработки до сантехнических и
+              электромонтажных работ.
+            </p>
+          </div>
+          <div class="slider-container" style="display: none">
+            <div class="slider">
+              <img
+                src="/images/sliders/jigsaw/slider1jigsaw.png"
+                alt="Photo 1"
+                class="slide"
+                height="350px"
+              />
+              <img
+                src="/images/sliders/jigsaw/slider2jigsaw.png"
+                alt="Photo 2"
+                class="slide"
+                height="350px"
+              />
+              <img
+                src="/images/sliders/jigsaw/slider3jigsaw.png"
+                alt="Photo 3"
+                class="slide"
+                height="350px"
+              />
+              <img
+                src="/images/sliders/jigsaw/slider4jigsaw.png"
+                alt="Photo 4"
+                class="slide"
+                height="350px"
+              />
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+            <div class="slider-dots"></div>
+            <p id="image-description"></p>
+          </div>
+          <div class="extra-container" style="display: none">
+            <a href="/pdfs/jigsaw.pdf">
+              <button>Просмотр руководства по эксплуатации инструмента</button>
+            </a>
+            <p class="text">
+              Руководство по эксплуатации электролобзика обычно содержит важную
+              информацию для безопасной и эффективной работы. Оно включает в
+              себя инструкции по сборке, эксплуатации и уходу за инструментом, а
+              также меры предосторожности для предотвращения несчастных случаев.
+              Кроме того, в нем могут содержаться рекомендации по выбору
+              подходящих лезвий для электролобзика. различные материалы и задачи
+              резки, регулировка углов резания и скорости, а также устранения
+              распространенных неполадок. Следуя за рекомендации по эксплуатации
+              обеспечивает оптимальную производительность и увеличивает срок
+              эксплуатации лобзик инструмент, минимизируя риск травмы.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/ru/js/jigsawru.js"></script>
+    <script src="https://use.fontawesome.com/df966d76e1.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
+  </body>
+</html>

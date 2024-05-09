@@ -1,0 +1,52 @@
+{
+  "tools": [
+    {
+      "category": "Fastener",
+      "name": "Шуруповерт",
+      "image": "/images/tools/screwdriver.png",
+      "link": "/ru/tools/screwdriverru.html"
+    },
+    {
+      "category": "Construction",
+      "name": "Перфоратор",
+      "image": "/images/tools/hammer.png",
+      "link": "/ru/tools/rotaryhammerru.html"
+    },
+    {
+      "category": "Construction",
+      "name": "Угловая шлиф машина",
+      "image": "/images/tools/grinder.png",
+      "link": "/ru/tools/anglegrinderru.html"
+    },
+    {
+      "category": "Home and Garden",
+      "name": "Пистолет-распылитель",
+      "image": "/images/tools/spraygun.png",
+      "link": "/ru/tools/spraygunru.html"
+    },
+    {
+      "category": "Woodwork",
+      "name": "Лобзик",
+      "image": "/images/tools/jigsaw2.png",
+      "link": "/ru/tools/jigsawru.html"
+    },
+    {
+      "category": "Woodwork",
+      "name": "Циркулярная пила",
+      "image": "/images/tools/circularsaw.png",
+      "link": "/ru/tools/circularsawru.html"
+    },
+    {
+      "category": "Woodwork",
+      "name": "Орбитальная шлиф машина",
+      "image": "/images/tools/orbital.png",
+      "link": "/ru/tools/orbitalru.html"
+    },
+    {
+      "category": "Woodwork",
+      "name": "Фрезер",
+      "image": "/images/tools/fraser.png",
+      "link": "/ru/tools/fraserru.html"
+    }
+  ]
+}

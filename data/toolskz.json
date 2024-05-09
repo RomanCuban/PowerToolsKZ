@@ -1,0 +1,52 @@
+{
+  "tools": [
+    {
+      "category": "Fastener",
+      "name": "Бұрағыш",
+      "image": "/images/tools/screwdriver.png",
+      "link": "/kz/tools/screwdriverkz.html"
+    },
+    {
+      "category": "Construction",
+      "name": "Перфоратор",
+      "image": "/images/tools/hammer.png",
+      "link": "/kz/tools/rotaryhammerkz.html"
+    },
+    {
+      "category": "Construction",
+      "name": "Бұрыштық тегістеуіш",
+      "image": "/images/tools/grinder.png",
+      "link": "/kz/tools/anglegrinderkz.html"
+    },
+    {
+      "category": "Home and Garden",
+      "name": "Бүріккіш Пистолет",
+      "image": "/images/tools/spraygun.png",
+      "link": "/kz/tools/spraygunkz.html"
+    },
+    {
+      "category": "Woodwork",
+      "name": "Лобзик",
+      "image": "/images/tools/jigsaw2.png",
+      "link": "/kz/tools/jigsawkz.html"
+    },
+    {
+      "category": "Woodwork",
+      "name": "Дөңгелек ара",
+      "image": "/images/tools/circularsaw.png",
+      "link": "/kz/tools/circularsawkz.html"
+    },
+    {
+      "category": "Woodwork",
+      "name": "Орбиталық тегістеуіш",
+      "image": "/images/tools/orbital.png",
+      "link": "/kz/tools/orbitalkz.html"
+    },
+    {
+      "category": "Woodwork",
+      "name": "Фрезер",
+      "image": "/images/tools/fraser.png",
+      "link": "/kz/tools/fraserkz.html"
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Шуруповерт</title>
+    <link rel="shortcut icon" href="/images/logo.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/tools/screwdriver.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="/images/logo.png" alt="logo" width="50" />
+          </a>
+          <a class="back" href="/ru/html/categoriesru.html"
+            ><img src="/images/back-svgrepo-com.svg" width="20px" />Категории</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="content">
+        <div class="tool">
+          <img src="/images/tools/screwdriver.png" alt="tool" />
+          <p>Шуруповерт</p>
+        </div>
+      </section>
+
+      <section class="specs_info">
+        <div class="specs">
+          <div class="specs1">
+            <img
+              src="/images/specs/voltage.svg"
+              alt="voltage"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Напряжение в электроинструменте обычно зависит от типа инструмента и его назначения. В большинстве случаев напряжение может составлять 110-120 вольт для инструментов, предназначенных для использования в домашних условиях или небольших мастерских, а также 220-240 вольт для инструментов, предназначенных для более интенсивного профессионального использования."
+            />
+            <p>12 - 18 V</p>
+          </div>
+          <div class="specs1">
+            <img
+              src="/images/specs/capacity.svg"
+              alt="capacity"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Сила тока в шуруповертах обычно указывается как потребляемый электрический ток или рабочий ток, который передается на инструмент от источника питания. Он может быть выражен в амперах (А) или миллиамперах (мА), в зависимости от мощности инструмента."
+            />
+            <p>1.5 - 4 Ah</p>
+          </div>
+          <div class="specs1">
+            <img
+              src="/images/specs/speed.svg"
+              alt="speed"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Частота вращения в шуруповертах обычно выражается в оборотах в минуту (rpm) и указывает на скорость вращения шпинделя (долот) во время работы инструмента. Это важный параметр, который влияет на производительность и экономичность шуруповерта."
+            />
+            <p>1300 - 4500 rpm</p>
+          </div>
+          <div class="specs1">
+            <img
+              src="/images/specs/chuck.svg"
+              alt="chuck"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Это механизм, который используется для удержания и фиксации различных насадок, таких как долота или сверла."
+            />
+            <p>10 - 13 mm</p>
+          </div>
+          <div class="specs1">
+            <img
+              src="/images/specs/settings.svg"
+              alt="settings"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Это означает, что существует 13 режимов завинчивания и 1 режим сверления."
+            />
+            <p>13 + 1</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="info">
+        <div class="info_container">
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Выберите Вид
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  onclick="showVideo()"
+                >
+                  Видео
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  onclick="showPhoto()"
+                >
+                  Фото
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  onclick="showExtra()"
+                >
+                  Экстра
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="video_container">
+            <video src="/video/screwdriver.mp4" controls muted></video>
+            <p class="text">
+              Шуруповерт - это ручной инструмент, предназначенный для
+              заворачивания винтов с целью их закрепления или ослабления. Обычно
+              она состоит из рукоятки и стержня, заканчивающегося наконечником,
+              который вставляется в головку винта. Отвертки бывают разных
+              размеров и типов для различных целей. различные головки винтов,
+              такие как плоские, крестообразные или Torx. Они являются
+              незаменимыми инструментами в столярном деле, строительстве и
+              домашнем хозяйстве ремонт.
+            </p>
+          </div>
+          <div class="slider-container" style="display: none">
+            <div class="slider">
+              <img
+                src="/images/sliders/screwdriver/slider1screwdriver.png"
+                alt="Photo 1"
+                class="slide"
+                height="350px"
+              />
+              <img
+                src="/images/sliders/screwdriver/slider2screwdriver.png"
+                alt="Photo 2"
+                class="slide"
+                height="350px"
+              />
+              <img
+                src="/images/sliders/screwdriver/slider3screwdriver.png"
+                alt="Photo 3"
+                class="slide"
+                height="350px"
+              />
+              <img
+                src="/images/sliders/screwdriver/slider4screwdriver.png"
+                alt="Photo 4"
+                class="slide"
+                height="350px"
+              />
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+            <div class="slider-dots"></div>
+            <p id="image-description"></p>
+          </div>
+          <div class="extra-container" style="display: none">
+            <a href="/pdfs/screwdriver.pdf">
+              <button>Просмотр руководства по эксплуатации инструмента</button>
+            </a>
+            <p class="text">
+              Руководство по эксплуатации отверток обычно содержит инструкции по
+              использованию, техническому обслуживанию и устранению неполадок с
+              отвертками. Он охватывает темы например, различные типы отверток,
+              правильное обращение с ними технические приемы, меры
+              предосторожности и советы по техническому обслуживанию.
+              Руководство по эксплуатации может также содержать информацию о
+              выборе подходящей отвертки для решения конкретных задач, понимания
+              типов и размеров винтов, а также распространенных проблем,
+              возникающих при использовании отверток, и способов их решения. В
+              целом, руководство по отвертке служит подробное руководство,
+              помогающее пользователям эффективно и безопасно использовать этот
+              важный инструмент.
+            </p>
+            <a href="/pdfs/screwdriver_extra.pdf">
+              <button>Просмотр руководства по эксплуатации аккумулятора</button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/ru/js/screwdriverru.js"></script>
+    <script src="https://use.fontawesome.com/df966d76e1.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
+  </body>
+</html>
