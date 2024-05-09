@@ -1,19 +1,19 @@
 {
   "tools": [
     {
-      "category": "Professional",
+      "category": "Fastener",
       "name": "Screwdriver",
       "image": "/images/tools/screwdriver.png",
       "link": "/html/tools/screwdriver.html"
     },
     {
-      "category": "Professional",
+      "category": "Construction",
       "name": "Rotary Hammer",
       "image": "/images/tools/hammer.png",
       "link": "/html/tools/rotaryhammer.html"
     },
     {
-      "category": "Professional",
+      "category": "Construction",
       "name": "Angle Grinder",
       "image": "/images/tools/grinder.png",
       "link": "/html/tools/anglegrinder.html"
@@ -25,16 +25,28 @@
       "link": "/html/tools/spraygun.html"
     },
     {
-      "category": "Saw",
+      "category": "Woodwork",
       "name": "Jigsaw",
       "image": "/images/tools/jigsaw2.png",
       "link": "/html/tools/jigsaw.html"
     },
     {
-      "category": "Saw",
+      "category": "Woodwork",
       "name": "Circular Saw",
       "image": "/images/tools/circularsaw.png",
       "link": "/html/tools/circularsaw.html"
+    },
+    {
+      "category": "Woodwork",
+      "name": "Orbital Sander",
+      "image": "/images/tools/orbital.png",
+      "link": "/html/tools/orbital.html"
+    },
+    {
+      "category": "Woodwork",
+      "name": "Fraser",
+      "image": "/images/tools/fraser.png",
+      "link": "/html/tools/fraser.html"
     }
   ]
 }

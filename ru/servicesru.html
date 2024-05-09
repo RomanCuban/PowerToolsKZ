@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Services</title>
+    <link rel="shortcut icon" href="/images/logo.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/services.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="/images/logo.png" alt="logo" width="50" />
+          </a>
+          <a class="back" href="/index.html"
+            ><img src="/images/back-svgrepo-com.svg" width="20px" />Home</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <section class="services">
+      <div class="dropdown" style="margin-bottom: 15px">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Select City
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="#" onclick="changeCity('Almaty')"
+              >Almaty</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="#" onclick="changeCity('Astana')"
+              >Astana</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="#" onclick="changeCity('Atyrau')"
+              >Atyrau</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+          <div id="map" style="width: 100%; height: 400px; border-radius: 15px">
+            &nbsp;
+          </div>
+          <script>
+            var map;
+            var markers = [];
+
+            DG.then(function () {
+              map = DG.map("map", {
+                center: [51.176561, 71.476489], // Default center
+                zoom: 12, // Default zoom level
+              });
+
+              // Function to change city and update map points
+              window.changeCity = function (city) {
+                // Clear existing markers
+                markers.forEach(function (marker) {
+                  map.removeLayer(marker);
+                });
+                markers = [];
+
+                // Update map center and zoom level based on selected city
+                if (city === "Almaty") {
+                  map.setView([43.25116544105796, 76.887817], 10); // Almaty coordinates and zoom level
+                  addMarker([43.25116544105796, 76.887817]);
+                  addMarker([43.3501126976629, 76.90640136931323]);
+                  addMarker([43.2771350656411, 76.93311027630465]);
+                  addMarker([43.21113233834803, 76.89047609938241]);
+                  addMarker([43.25046765910746, 76.87442576095474]);
+                  addMarker([43.23429867843497, 76.85320779060625]);
+                  updateAddress([
+                    {
+                      address: "Tole Bi Street 216b",
+                      city: "Almaty, Kazakhstan",
+                    },
+                    {
+                      address: "m-on Karasu, 47 Burundayskaya str.",
+                      city: "Almaty, Kazakhstan",
+                    },
+                    {
+                      address: "Kommunal'naya Ulitsa 39",
+                      city: "Almaty, Kazakhstan",
+                    },
+                    {
+                      address: "Ulitsa Tazhibayevoy 155/1",
+                      city: "Almaty, Kazakhstan",
+                    },
+                    {
+                      address: "Prokofyev St 89",
+                      city: "Almaty, Kazakhstan",
+                    },
+                    {
+                      address: "Auezov District",
+                      city: "Almaty, Kazakhstan",
+                    },
+                  ]);
+                } else if (city === "Astana") {
+                  map.setView([51.17171210298674, 71.47504730604578], 10); // Astana coordinates and zoom level
+                  addMarker([51.17171210298674, 71.47504730604578]);
+                  addMarker([51.16697615264329, 71.46749420560923]);
+                  addMarker([51.145873736936444, 71.43487854356717]);
+                  addMarker([51.170330475479524, 71.38575701626462]);
+                  addMarker([51.04997897046733, 71.4192460836294]);
+                  updateAddress([
+                    {
+                      address: "Alexander Pushkin St 37/1",
+                      city: "Astana, Kazakhstan",
+                    },
+                    {
+                      address: "Abay Ave 94A",
+                      city: "Astana, Kazakhstan",
+                    },
+                    {
+                      address: "3rd microdistrict 18A",
+                      city: "Astana, Kazakhstan",
+                    },
+                    {
+                      address: "street. 188 13",
+                      city: "Astana, Kazakhstan",
+                    },
+                    {
+                      address: "Qabanbay Batyr Ave",
+                      city: "Astana, Kazakhstan",
+                    },
+                  ]);
+                } else if (city === "Atyrau") {
+                  map.setView([47.09611100937688, 51.92745584375469], 12); // Atyrau coordinates and zoom level
+                  addMarker([47.09611100937688, 51.92745584375469]);
+                  addMarker([47.097133565020336, 51.89997167494478]);
+                  addMarker([47.10506138184094, 51.88290241611714]);
+                  addMarker([47.11225814143272, 51.89354052227591]);
+                  updateAddress([
+                    {
+                      address: "Syrym Datuly St 4",
+                      city: "Atyrau, Kazakhstan",
+                    },
+                    {
+                      address: "Mukhtar Auezov Ave 5",
+                      city: "Atyrau, Kazakhstan",
+                    },
+                    {
+                      address: "Qurmanghazy St",
+                      city: "Atyrau, Kazakhstan",
+                    },
+                    {
+                      address: "Gagarin St 111",
+                      city: "Atyrau, Kazakhstan",
+                    },
+                  ]);
+                }
+              };
+
+              // Function to add marker to the map
+              function addMarker(coords) {
+                var marker = DG.marker(coords).addTo(map);
+                markers.push(marker);
+              }
+
+              // Function to update address information
+              function updateAddress(addresses) {
+                var addressBlock = document.getElementById("addressBlock");
+                var html = "<ul>";
+                addresses.forEach(function (addr) {
+                  html += `<li class="address"><p><strong>${addr.address}</strong><br />${addr.city}</p></li>`;
+                });
+                html += "</ul>";
+                addressBlock.innerHTML = html;
+              }
+
+              // Initially add markers and address for default city (Almaty)
+              changeCity("Almaty");
+            });
+          </script>
+        </div>
+
+        <div class="col-md-4">
+          <div class="address-block" id="addressBlock"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://use.fontawesome.com/df966d76e1.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

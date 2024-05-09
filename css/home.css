@@ -178,3 +178,21 @@ a.user_logo {
   text-decoration: none;
   color: #000;
 }
+
+footer {
+  color: #a8deef;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+footer div {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+footer div img {
+  width: 80px; /* Задаем одинаковую ширину для всех изображений */
+  height: 45px; /* Сохраняем пропорции */
+}
